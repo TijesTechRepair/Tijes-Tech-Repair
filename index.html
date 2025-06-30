@@ -2,10 +2,10 @@
 <html lang="nl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tije's Tech Repair</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     * {
       margin: 0;
@@ -22,18 +22,27 @@
 
     header {
       background-color: #1a1a1a;
-      padding: 1.5rem;
-      text-align: center;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
       border-bottom: 2px solid #3a3a3a;
     }
 
+    header img.logo {
+      height: 50px;
+      width: auto;
+    }
+
     header h1 {
-      font-size: 2.2rem;
+      font-size: 2rem;
       color: #00d1b2;
+      cursor: default;
+      user-select: none;
     }
 
     nav {
-      margin-top: 1rem;
+      margin-left: auto;
     }
 
     nav a {
@@ -41,6 +50,8 @@
       text-decoration: none;
       margin: 0 1rem;
       font-weight: 600;
+      font-size: 1rem;
+      transition: color 0.3s;
     }
 
     nav a:hover {
@@ -60,6 +71,18 @@
     h2 {
       color: #00d1b2;
       margin-bottom: 0.8rem;
+      border-bottom: 2px solid #00d1b2;
+      padding-bottom: 0.3rem;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 1rem;
+    }
+
+    ul li::before {
+      content: "✅ ";
+      color: #00d1b2;
     }
 
     footer {
@@ -68,6 +91,8 @@
       background-color: #1a1a1a;
       border-top: 2px solid #3a3a3a;
       margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #888;
     }
 
     .contact-form label {
@@ -83,6 +108,8 @@
       border-radius: 8px;
       background-color: #222;
       color: #fff;
+      font-size: 1rem;
+      resize: vertical;
     }
 
     .contact-form button {
@@ -94,6 +121,8 @@
       border-radius: 8px;
       font-weight: bold;
       cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s;
     }
 
     .contact-form button:hover {
@@ -103,9 +132,11 @@
 </head>
 <body>
   <header>
+    <img src="https://www.mediafire.com/file/xgnptkkxw3l27hq/tijes-tech-repair-high-resolution-logo-transparent.png/file" alt="Tije's Tech Repair Logo" class="logo" />
     <h1>Tije's Tech Repair</h1>
     <nav>
       <a href="#diensten">Diensten</a>
+      <a href="#voorwaarden">Voorwaarden</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
@@ -113,25 +144,39 @@
   <main>
     <section id="intro">
       <h2>Welkom!</h2>
-      <p>Ik ben Tije, en ik repareer jouw tech voor maar <strong>€10</strong>! Of het nu om een trage laptop gaat, softwareproblemen of een stofvrije desktop – ik help je snel en voordelig. Moet ik onderdelen vervangen? Dan betaal je alleen een beetje extra voor het onderdeel zelf.</p>
+      <p>Ik ben Tije, en ik repareer jouw tech snel en voordelig. Voor de meeste reparaties geldt een vaste prijs van <strong>€10</strong>. Moeten er onderdelen vervangen worden of moet er een nieuwe Windows-licentie worden aangeschaft? Dan wordt de prijs verhoogd met <strong>€10</strong> per onderdeel of licentie. Zo blijft het altijd duidelijk en eerlijk.</p>
+      <p>Voor het opnieuw installeren van Windows geldt een vaste prijs van <strong>€12,50</strong>, exclusief eventuele kosten voor een nieuwe Windows-sleutel.</p>
+      <p>Kan ik het probleem niet oplossen? Dan betaal je natuurlijk niets!</p>
     </section>
 
     <section id="diensten">
       <h2>Diensten</h2>
       <ul>
-        <li>✅ Windows opnieuw installeren – €10</li>
-        <li>✅ Laptop of PC traag? Ik maak 'm snel – €10</li>
-        <li>✅ Virussen verwijderen – €10</li>
-        <li>✅ Kleine hardwarefixes – €10 + onderdeel</li>
-        <li>✅ SSD upgrades – €10 + prijs SSD</li>
-        <li>✅ Alles wat ik <strong>niet kan maken</strong>? Dan betaal je niets!</li>
+        <li>Windows opnieuw installeren – €12,50 (excl. Windows-licentie)</li>
+        <li>Laptop of PC traag? Ik maak 'm snel – €10</li>
+        <li>Virussen verwijderen – €10</li>
+        <li>Kleine hardwarefixes – €10 + onderdeelkosten</li>
+        <li>SSD upgrades – €10 + prijs SSD</li>
+        <li>Aanschaf van onderdelen, Windows-licenties of andere nieuwe onderdelen worden apart berekend met een toeslag van €10 per onderdeel/licentie</li>
+        <li>Kan ik het niet repareren? Dan betaal je niets!</li>
       </ul>
+    </section>
+
+    <section id="voorwaarden">
+      <h2>Voorwaarden</h2>
+      <p>– De basisprijs voor reparaties zonder nieuwe onderdelen is altijd <strong>€10</strong>, behalve bij Windows-installatie, die <strong>€12,50</strong> kost.</p>
+      <p>– Extra kosten voor nieuwe onderdelen, zoals hardware onderdelen of Windows-licenties, worden apart in rekening gebracht, met een toeslag van <strong>€10</strong> per onderdeel/licentie.</p>
+      <p>– Bij reparaties waarbij nieuwe onderdelen nodig zijn, worden deze kosten vooraf met jou besproken en pas na jouw akkoord uitgevoerd.</p>
+      <p>– Als de reparatie niet succesvol is, breng ik geen kosten in rekening.</p>
+      <p>– Ik ben niet aansprakelijk voor dataverlies; zorg dat je altijd een back-up maakt voor de reparatie.</p>
+      <p>– Repareer ik hardware, dan doe ik dat met zorg maar zonder garantie op toekomstige problemen.</p>
+      <p>– Door gebruik te maken van mijn diensten ga je akkoord met deze voorwaarden.</p>
     </section>
 
     <section id="contact">
       <h2>Contact</h2>
       <form class="contact-form" name="contact" method="POST" data-netlify="true">
-        <input type="hidden" name="form-name" value="contact">
+        <input type="hidden" name="form-name" value="contact" />
         <label for="name">Naam</label>
         <input type="text" id="name" name="name" required />
 
@@ -145,7 +190,6 @@
       </form>
     </section>
   </main>
-  
 
   <footer>
     &copy; 2025 Tije's Tech Repair – Alle rechten voorbehouden.
