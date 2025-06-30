@@ -4,78 +4,101 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Voorwaarden - Tije's Tech Repair</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
-    /* Zelfde stijl als index.html */
     * {
       margin: 0; padding: 0; box-sizing: border-box;
       font-family: 'Inter', sans-serif;
     }
     body {
-      background-color: #0f0f0f; color: #f5f5f5; line-height: 1.6;
+      background-color: #1f1f1f;
+      color: #e0e0e0;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
     header {
-      background-color: #1a1a1a; padding: 1rem 2rem; display: flex; align-items: center; gap: 1rem; border-bottom: 2px solid #3a3a3a;
+      background-color: #2a2a2a;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      border-bottom: 2px solid #444;
     }
     header img.logo {
-      height: 50px; width: auto;
-    }
-    header h1 {
-      font-size: 2rem; color: #00d1b2; user-select: none;
-    }
-    nav {
-      margin-left: auto;
-    }
-    nav a {
-      color: #ddd; text-decoration: none; margin: 0 1rem; font-weight: 600; font-size: 1rem; transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #00d1b2;
+      height: 60px;
+      width: auto;
+      user-select: none;
     }
     main {
-      padding: 2rem; max-width: 800px; margin: auto;
+      padding: 2rem;
+      max-width: 700px;
+      margin: 2rem auto 3rem;
+      flex-grow: 1;
     }
-    section {
-      margin-bottom: 2.5rem;
+    h1 {
+      color: #00d1b2;
+      margin-left: 1rem;
+      font-size: 2rem;
+      user-select: none;
     }
     h2 {
-      color: #00d1b2; margin-bottom: 0.8rem; border-bottom: 2px solid #00d1b2; padding-bottom: 0.3rem;
-    }
-    footer {
-      text-align: center; padding: 1rem; background-color: #1a1a1a; border-top: 2px solid #3a3a3a; margin-top: 3rem; font-size: 0.9rem; color: #888;
+      color: #00d1b2;
+      margin-bottom: 0.8rem;
+      border-bottom: 2px solid #00d1b2;
+      padding-bottom: 0.3rem;
     }
     ul {
-      list-style-type: disc;
       padding-left: 1.2rem;
-      margin-bottom: 1rem;
+      margin-top: 1rem;
+      list-style-type: disc;
+      color: #ccc;
+    }
+    ul li {
+      margin-bottom: 0.7rem;
+    }
+    a.back-link {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #00d1b2;
+      color: #000;
+      font-weight: 600;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+    a.back-link:hover {
+      background-color: #00b89c;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #2a2a2a;
+      border-top: 2px solid #444;
+      font-size: 0.9rem;
+      color: #888;
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="https://www.mediafire.com/file/xgnptkkxw3l27hq/tijes-tech-repair-high-resolution-logo-transparent.png/file" alt="Tije's Tech Repair Logo" class="logo" />
-    <h1>Tije's Tech Repair</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="#voorwaarden">Voorwaarden</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <img src="logo.png" alt="Tije's Tech Repair Logo" class="logo" />
+    <h1>Voorwaarden</h1>
   </header>
 
   <main>
-    <section id="voorwaarden">
-      <h2>Voorwaarden</h2>
-      <ul>
-        <li>De basisprijs voor reparaties zonder nieuwe onderdelen is altijd <strong>€10</strong>, behalve bij Windows-installatie, die <strong>€12,50</strong> kost.</li>
-        <li>Extra kosten voor nieuwe onderdelen, zoals hardware onderdelen of Windows-licenties, worden apart in rekening gebracht, met een toeslag van <strong>€10</strong> per onderdeel/licentie.</li>
-        <li>Bij reparaties waarbij nieuwe onderdelen nodig zijn, worden deze kosten vooraf met jou besproken en pas na jouw akkoord uitgevoerd.</li>
-        <li>Als de reparatie niet succesvol is, breng ik geen kosten in rekening.</li>
-        <li>Ik ben niet aansprakelijk voor dataverlies; zorg dat je altijd een back-up maakt voor de reparatie.</li>
-        <li>Repareer ik hardware, dan doe ik dat met zorg maar zonder garantie op toekomstige problemen.</li>
-        <li>Door gebruik te maken van mijn diensten ga je akkoord met deze voorwaarden.</li>
-      </ul>
-    </section>
+    <ul>
+      <li>De basisprijs voor reparaties zonder nieuwe onderdelen is altijd <strong>€10</strong>, behalve bij Windows-installatie, die <strong>€12,50</strong> kost.</li>
+      <li>Extra kosten voor nieuwe onderdelen, zoals hardware onderdelen of Windows-licenties, worden apart in rekening gebracht, met een toeslag van <strong>€10</strong> per onderdeel/licentie.</li>
+      <li>Bij reparaties waarbij nieuwe onderdelen nodig zijn, worden deze kosten vooraf met jou besproken en pas na jouw akkoord uitgevoerd.</li>
+      <li>Als de reparatie niet succesvol is, breng ik geen kosten in rekening.</li>
+      <li>Ik ben niet aansprakelijk voor dataverlies; zorg dat je altijd een back-up maakt voor de reparatie.</li>
+      <li>Repareer ik hardware, dan doe ik dat met zorg maar zonder garantie op toekomstige problemen.</li>
+      <li>Door gebruik te maken van mijn diensten ga je akkoord met deze voorwaarden.</li>
+    </ul>
+
+    <a href="index.html" class="back-link">← Terug naar Home</a>
   </main>
 
   <footer>
