@@ -127,14 +127,14 @@
   <main>
     <section id="intro">
       <h2>Welkom!</h2>
-<p>
-  De basisprijs voor reparaties is <strong>€10</strong>.  
-  Als er nieuwe onderdelen of een Windows-licentie nodig zijn, worden de kosten daarvan apart berekend.  
-  De prijzen van onderdelen en licenties kunnen variëren door marktomstandigheden en inflatie.  
-  Je ontvangt altijd vooraf een prijsopgave per e-mail voordat ik iets aanschaf of installeer.  
-  Als er geen onderdelen nodig zijn, betaal je alleen de vaste prijs van <strong>€10</strong>.
-</p>
-<a href="voorwaarden.html" class="button-link">Lees de volledige voorwaarden</a>
+      <p>
+        De basisprijs voor reparaties is <strong>€10</strong>.  
+        Als er nieuwe onderdelen of een Windows-licentie nodig zijn, worden de kosten daarvan apart berekend.  
+        De prijzen van onderdelen en licenties kunnen variëren door marktomstandigheden en inflatie.  
+        Je ontvangt altijd vooraf een prijsopgave per e-mail voordat ik iets aanschaf of installeer.  
+        Als er geen onderdelen nodig zijn, betaal je alleen de vaste prijs van <strong>€10</strong>.
+      </p>
+      <a href="voorwaarden.html" class="button-link">Lees de volledige voorwaarden</a>
     </section>
 
     <section id="diensten">
@@ -152,9 +152,7 @@
 
     <section id="contact">
       <h2>Contact</h2>
-      <form class="contact-form" name="contact" method="POST" data-netlify="true">
-        <input type="hidden" name="form-name" value="contact" />
-
+      <form id="contactForm" class="contact-form">
         <label for="name">Naam</label>
         <input type="text" id="name" name="name" required autocomplete="name" />
 
@@ -172,6 +170,25 @@
   <footer>
     &copy; 2025 Tije's Tech Repair – Alle rechten voorbehouden.
   </footer>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const naam = encodeURIComponent(document.getElementById('name').value.trim());
+      const email = encodeURIComponent(document.getElementById('email').value.trim());
+      const bericht = encodeURIComponent(document.getElementById('message').value.trim());
+
+      const subject = encodeURIComponent('Nieuwe reparatie aanvraag van ' + naam);
+      const body = encodeURIComponent(
+        `Naam: ${naam}\nE-mail: ${email}\n\nBericht:\n${bericht}`
+      );
+
+      const mailtoLink = `mailto:TijesTechRepairs@gmail.com?subject=${subject}&body=${body}`;
+
+      window.location.href = mailtoLink;
+    });
+  </script>
 
 </body>
 </html>
