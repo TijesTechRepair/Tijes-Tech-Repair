@@ -7,7 +7,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     * {
-      margin: 0; padding: 0; box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
       font-family: 'Inter', sans-serif;
     }
     body {
@@ -128,35 +130,35 @@
     <section id="intro">
       <h2>Welkom!</h2>
       <p>
-        De basisprijs voor reparaties is <strong>€10</strong>.  
-        Als er nieuwe onderdelen of een Windows-licentie nodig zijn, worden de kosten daarvan apart berekend.  
-        De prijzen van onderdelen en licenties kunnen variëren door marktomstandigheden en inflatie.  
-        Je ontvangt altijd vooraf een prijsopgave per e-mail voordat ik iets aanschaf of installeer.  
-        Als er geen onderdelen nodig zijn, betaal je alleen de vaste prijs van <strong>€10</strong>.
+        De standaardprijs voor reparaties is <strong>€10</strong>.<br />
+        Indien nieuwe onderdelen of een Windows-licentie nodig zijn, worden deze apart berekend.<br />
+        De prijzen kunnen variëren vanwege marktomstandigheden en inflatie.<br />
+        Je ontvangt altijd vooraf per e-mail een prijsopgave voordat ik iets aanschaf of installeer.<br />
+        Zijn er geen onderdelen nodig? Dan betaal je alleen de vaste prijs van <strong>€10</strong>.
       </p>
-      <a href="voorwaarden.html" class="button-link">Lees de volledige voorwaarden</a>
+      <a href="voorwaarden.html" class="button-link">Bekijk de voorwaarden</a>
     </section>
 
     <section id="diensten">
       <h2>Diensten</h2>
       <ul>
-        <li>Windows opnieuw installeren – €10 (excl. eventuele licentie)</li>
-        <li>Laptop of PC traag? Ik maak 'm snel – €10</li>
+        <li>Windows herinstalleren – €10 (excl. licentie indien nodig)</li>
+        <li>Langzame laptop of PC versnellen – €10</li>
         <li>Virussen verwijderen – €10</li>
-        <li>Kleine hardwarefixes – €10 + onderdeelkosten</li>
-        <li>SSD upgrades – €10 + prijs SSD</li>
-        <li>Nieuwe onderdelen en licenties worden apart berekend met een toeslag van €10 per onderdeel/licentie</li>
-        <li>Kan ik het niet repareren? Dan betaal je niets!</li>
+        <li>Kleine hardwareherstellingen – €10 + onderdelenkosten</li>
+        <li>SSD-upgrades – €10 + prijs van SSD</li>
+        <li>Onderdelen/licenties: aparte kosten + €10 toeslag per item</li>
+        <li>Onmogelijk te repareren? Dan betaal je niets!</li>
       </ul>
     </section>
 
     <section id="contact">
       <h2>Contact</h2>
       <form id="contactForm" class="contact-form">
-        <label for="name">Naam</label>
+        <label for="name">Je naam</label>
         <input type="text" id="name" name="name" required autocomplete="name" />
 
-        <label for="email">E-mail</label>
+        <label for="email">E-mailadres</label>
         <input type="email" id="email" name="email" required autocomplete="email" />
 
         <label for="message">Wat wil je laten repareren?</label>
@@ -185,7 +187,6 @@
       );
 
       const mailtoLink = `mailto:TijesTechRepairs@gmail.com?subject=${subject}&body=${body}`;
-
       window.location.href = mailtoLink;
     });
   </script>
